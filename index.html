@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehicle Service Booking</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 500px;
+      background: white;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #555;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background: #007bff;
+      color: white;
+      font-weight: bold;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Book Vehicle Service</h1>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="vehicle">Vehicle Type:</label>
+      <select id="vehicle" required>
+        <option>Car</option>
+        <option>Motorbike</option>
+      </select>
+
+      <label for="model">Vehicle Model:</label>
+      <input type="text" id="model" required>
+
+      <label for="date">Service Date:</label>
+      <input type="date" id="date" required>
+
+      <label for="time">Service Time:</label>
+      <input type="time" id="time" required>
+
+      <label for="service">Service Type:</label>
+      <select id="service" required>
+        <option>Oil Change</option>
+        <option>Brake Inspection</option>
+        <option>Engine Diagnostic</option>
+        <option>Full Service</option>
+      </select>
+
+      <label for="contact">Contact Number:</label>
+      <input type="tel" id="contact" required>
+
+      <input type="submit" value="Book Now">
+    </form>
+  </div>
+</body>
+</html>
