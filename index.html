@@ -2,161 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Vehicle Service Booking</title>
+  <title>Service Booking</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
+  
+<!--The style--->
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #a18cd1, #fbc2eb);
-      color: #333;
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 600px;
-      background: #fff;
-      padding: 40px;
-      margin: auto;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      animation: fadeIn 0.7s ease-in-out;
-    }
-
-    h1 {
-      text-align: center;
-      color: #7b2cbf;
-      margin-bottom: 30px;
-    }
-
-    label {
-      display: block;
-      font-weight: 600;
-      margin: 20px 0 8px;
-    }
-
-    input, select {
-      width: 100%;
-      padding: 12px 15px;
-      font-size: 15px;
-      border: 2px solid #ccc;
-      border-radius: 10px;
-      transition: 0.3s ease;
-      background-color: #f9f9f9;
-    }
-
-    input:focus, select:focus {
-      border-color: #9d4edd;
-      background-color: #fff;
-      outline: none;
-    }
-
-    input[type="submit"] {
-      background: #9d4edd;
-      color: white;
-      font-weight: 600;
-      border: none;
-      margin-top: 30px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    input[type="submit"]:hover {
-      background: #7b2cbf;
-    }
-
-    .icon {
-      margin-right: 8px;
-      color: #7b2cbf;
-    }
-
-    #success {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      background: #d8f3dc;
-      border: 2px solid #95d5b2;
-      border-radius: 15px;
-      margin-top: 30px;
-      animation: fadeIn 0.6s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 30px 20px;
-      }
-    }
+    *{box-sizing:border-box}body{margin:0;font-family:Poppins,sans-serif;background:linear-gradient(to right,#a18cd1,#fbc2eb);color:#333;padding:40px 20px}.container{max-width:600px;background:#fff;padding:40px;margin:auto;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.15);animation:fadeIn .7s ease-in-out}h1{text-align:center;color:#7b2cbf;margin-bottom:30px}label{display:block;font-weight:600;margin:20px 0 8px}input,select{width:100%;padding:12px 15px;font-size:15px;border:2px solid #ccc;border-radius:10px;transition:.3s;background:#f9f9f9}input:focus,select:focus{border-color:#9d4edd;background:#fff;outline:none}input[type=submit]{background:#9d4edd;color:#fff;font-weight:600;border:none;margin-top:30px;cursor:pointer;transition:.3s}input[type=submit]:hover{background:#7b2cbf}.icon{margin-right:8px;color:#7b2cbf}#success{display:none;text-align:center;padding:20px;background:#d8f3dc;border:2px solid #95d5b2;border-radius:15px;margin-top:30px;animation:fadeIn .6s ease-in-out}@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}@media(max-width:600px){.container{padding:30px 20px}}
   </style>
 </head>
+
+<!--Main containers-->
+
 <body>
-
   <div class="container" id="form-container">
-    <h1><i class="fas fa-tools icon"></i>Vehicle Service</h1>
+    <h1><i class="fas fa-tools icon"></i>Vehicle Services </h1>
+    <h5>(Group project)</h5>
     <form id="booking-form">
-      <label for="name"><i class="fas fa-user icon"></i>Full Name:</label>
-      <input type="text" id="name" required>
-
-      <label for="vehicle"><i class="fas fa-car icon"></i>Vehicle Type:</label>
-      <select id="vehicle" required>
-        <option disabled selected>Select a vehicle type</option>
-        <option>Car</option>
-        <option>Motorbike</option>
-      </select>
-
-      <label for="model"><i class="fas fa-id-card icon"></i>Vehicle Model:</label>
-      <input type="text" id="model" required>
-
-      <label for="date"><i class="fas fa-calendar-alt icon"></i>Service Date:</label>
-      <input type="date" id="date" required>
-
-      <label for="time"><i class="fas fa-clock icon"></i>Service Time:</label>
-      <input type="time" id="time" required>
-
-      <label for="service"><i class="fas fa-wrench icon"></i>Service Type:</label>
-      <select id="service" required>
-        <option disabled selected>Select a service</option>
-        <option>Oil Change</option>
-        <option>Brake Inspection</option>
-        <option>Engine Diagnostic</option>
-        <option>Full Service</option>
-      </select>
-
-      <label for="contact"><i class="fas fa-phone icon"></i>Contact Number:</label>
-      <input type="tel" id="contact" required>
-
+      <label><i class="fas fa-user icon"></i>Full Name:</label><input type="text" required>
+      <label><i class="fas fa-car icon"></i>Vehicle Type:</label><select required><option disabled selected>Select</option><option>Car</option><option>Motorbike</option></select>
+      <label><i class="fas fa-id-card icon"></i>Model:</label><input type="text" required>
+      <label><i class="fas fa-calendar-alt icon"></i>Date:</label><input type="date" required>
+      <label><i class="fas fa-clock icon"></i>Time:</label><input type="time" required>
+      <label><i class="fas fa-wrench icon"></i>Service:</label><select required><option disabled selected>Select</option><option>Oil Change</option><option>Brake Inspection</option><option>Engine Diagnostic</option><option>Full Service</option></select>
+      <label><i class="fas fa-phone icon"></i>Contact:</label><input type="tel" required>
       <input type="submit" value="Book Now">
     </form>
-
     <div id="success">
-      <h2>✅ Booking Successful!</h2>
-      <p>Thank you for booking your vehicle service.</p>
+      <h2> Booking Successful!</h2>
+      <p>Thank you for booking.</p>
     </div>
   </div>
-
   <script>
-    const form = document.getElementById('booking-form');
-    const successBox = document.getElementById('success');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      form.reset();
-      successBox.style.display = 'block';
-      form.style.display = 'none';
-    });
+    const f=document.getElementById('booking-form'),s=document.getElementById('success');
+    f.onsubmit=e=>{e.preventDefault();f.reset();s.style.display='block';f.style.display='none'};
   </script>
-
 </body>
 </html>
